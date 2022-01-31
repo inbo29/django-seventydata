@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %} login {% endblock %}
+{% block content %}
+
+<div class="section log-in wf-section">
+    <div class="wrap w50 log-in">
+      <div class="form2">
+        <div class="_5-col log-in-img-area">
+          <div class="form2-image-wrapper log-in-img"></div>
+        </div>
+        <div class="_7-col _7-col-last margin-up-down-20">
+          <div class="form2-form-section-wrapper">
+            <div class="form2-form-wrap divece-phone-margin-top-0 w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" class="form2-wrapper">
+
+                <div class="tagline">Welcome to Cards 2.0</div>
+                {{form.as_p}}
+                {% csrf_token %}
+                <input class="btn btn-primary" type="submit" value="Login">
+
+<!--                <h2 class="form2-headline log-in-head">로그인</h2><label for="name-3" class="log-in-text">아이디</label><input type="text" class="form2-input register-margin-bottom-15 w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="아이디를 입력해주세요" id="name-2"><label for="email-3" class="log-in-text">이메일</label><input type="text" class="form2-input register-margin-bottom-15 w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="이메일을 입력해주세요" id="email-2" required=""><label for="password-3" class="log-in-text">비밀번호</label><input type="password" class="form2-input w-input" maxlength="256" name="password-2" data-name="Password 2" placeholder="비밀번호를 입력해주세요" id="password-2" required="">-->
+<!--                <div class="signup-account-link password-find log-in-text">비밀 번호를 잊으셨나요? <a href="#" class="link-2">비밀번호 찾기</a>-->
+<!--                </div>-->
+<!--                <div class="form2-buttons-wrapper"><input type="submit" value="로그인" data-wait="Please wait..." class="btn log-in w-button"><input type="submit" value="회원가입" data-wait="Please wait..." class="btn log-in-button-2 w-button">-->
+<!--                  <div class="signup-account-link register">No Account? <a href="#" class="register-link">Register Here</a>-->
+<!--                  </div>-->
+                </div>
+              </form>
+              <div class="form2-success-message w-form-done"><img src="images/big-check2x.png" width="200" alt="">
+                <div class="form2-success-message-text">Thanks for Signing Up!</div>
+              </div>
+              <div class="form2-error-message w-form-fail">
+                <div class="form2-error-message-text">Oops! Something went terribly wrong.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--    <section class="sub-page-banner parallax" id="banner">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                    <div class="page-banner text-center">-->
+<!--                        <h1 class="sub-banner-title">Login</h1>-->
+<!--&lt;!&ndash;                        <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li><a href="index.html">Login</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <li>Register</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </ul>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!--    <div class="row">-->
+<!--        <div class="col-md-2"></div>-->
+<!--        <div class="col-md-8 panel panel-default">-->
+<!--            <div class="alert alert-info">-->
+<!--                Please enter your login-->
+<!--            </div>-->
+<!--            <form action="" method="post">-->
+<!--                {{form.as_p}}-->
+<!--                {% csrf_token %}-->
+<!--                <input class="btn btn-primary" type="submit" value="Login">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="col-md-2"></div>-->
+<!--    </div>-->
+
+{% endblock %}

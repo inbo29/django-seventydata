@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Sing up {% endblock %}
+{% block content %}
+<div class="section register wf-section">
+    <div class="wrap w50 log-in">
+      <div class="form2 register-height-550">
+        <div class="_5-col register">
+          <div class="form2-image-wrapper log-in-img"></div>
+        </div>
+        <div class="_7-col _7-col-last _12-col margin-up-down-20">
+          <div class="form2-form-section-wrapper">
+            <div class="form2-form-wrap register-box-padding-150px w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" class="form2-wrapper">
+                <div class="tagline">Welcome to Cards 2.0</div>
+                    <h2 class="form2-headline register-head">회원가입</h2>
+
+                    {{form.as_p}}
+                    {% csrf_token %}
+<!--                <div class="register-flex-box"><label for="name-3" class="register-text">이름</label><input type="text" class="form2-input register-input-width w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="이름을 입력하세요" id="name-2"></div>-->
+<!--                <div class="register-flex-box"><label for="Name-4" class="register-text">아이디</label><input type="text" class="form2-input register-input-width w-input" maxlength="256" name="Name-3" data-name="Name 3" placeholder="아이디를 입력하세요" id="Name-4"></div>-->
+<!--                <div class="register-flex-box"><label for="email-3" class="register-text">이메일</label><input type="text" class="form2-input register-input-width w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="이메일을 입력하세요" id="email-2" required=""></div>-->
+<!--                <div class="register-flex-box display-flex-fertical"><label for="password-3" class="register-text">비밀번호</label><input type="password" class="form2-input register-password register-input-width margin-bottom-0 w-input" maxlength="256" name="password-2" data-name="Password 2" placeholder="비밀번호를 입력하세요" id="password-2" required="">-->
+<!--                  <div class="signup-account-link register register-p">8자 이상 영문 대소문자, 숫자,<br>특수문자만 사용해주세요<a href="#" class="register-link register-hide">Register Here</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="register-flex-box"><label for="Password-confirm-3" class="register-text">비밀번호 재확인</label><input type="password" class="form2-input register-password register-input-width w-input" maxlength="256" name="Password-confirm-3" data-name="Password Confirm 3" placeholder="비밀번호를 입력하세요" id="Password-confirm-3" required=""></div>-->
+<!--                <div class="register-flex-box"><label for="Phone-3" class="register-text">휴대전화</label><input type="tel" class="form2-input register-input-width w-input" maxlength="256" name="Phone-3" data-name="Phone 3" placeholder="전화번호를 입력하세요" id="Phone-3"></div>-->
+                <div class="form2-buttons-wrapper register">
+<!--                    <input type="submit" value="로그인" data-wait="Please wait..." class="btn register w-button"><input type="submit" value="가입하기" data-wait="Please wait..." class="btn register-2 w-button">-->
+<!--                      <div class="signup-account-link register">No Account? <a href="#" class="register-link">Register Here</a></div>-->
+                      <a href="{% url 'login' %}" class="register-back-key">뒤로가기</a>
+                        <a href="{% url 'profile' %}"><input class="btn btn-primary" type="submit" value="Registration"></a>
+
+                </div>
+              </form>
+              <div class="signup-account-link register-hide">forget password? <a href="#" class="find-password">Click Here</a>
+              </div>
+              <div class="form2-success-message w-form-done"><img src="{% static 'images/big-check2x.png' %}" width="200" alt="">
+                <div class="form2-success-message-text">Thanks for Signing Up!</div>
+              </div>
+              <div class="form2-error-message w-form-fail">
+                <div class="form2-error-message-text">Oops! Something went terribly wrong.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--    <div class="row">-->
+<!--        <div class="col-md-2"></div>-->
+<!--        <div class="col-md-8 panel panel-default">-->
+<!--            <div class="alert alert-info">-->
+<!--                Please enter your account information.-->
+<!--            </div>-->
+<!--            <form action="" method="post">-->
+<!--                {{form.as_p}}-->
+<!--                {% csrf_token %}-->
+<!--                <input class="btn btn-primary" type="submit" value="Registration">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="col-md-2"></div>-->
+<!--    </div>-->
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+
+    <section class="sub-page-banner parallax" id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-banner text-center">
+                        <h1 class="sub-banner-title">logout</h1>
+<!--                        <ul>-->
+<!--                            <li><a href="index.html">Login</a></li>-->
+<!--                            <li>Register</li>-->
+<!--                        </ul>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 panel panel-default">
+            <div class="alert alert-info">
+                Please enter your login
+            </div>
+            <form action="" method="post">
+                {{form.as_p}}
+                {% csrf_token %}
+                <a class="btn btn-primary" href="{% url 'login' %}">Click to Login</a>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+{% endblock %}
